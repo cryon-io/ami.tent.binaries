@@ -15,13 +15,9 @@ end
 
 local _binaryUrl = ""
 if _platform.DISTRO:match("Debian") ~= nil then 
-    _binaryUrl = "https://github.com/Snowgem/Snowgem/releases/download/v3000457-20190909/snowgem-debian9.11.0-3000457-20190926.zip"
-elseif _platform.DISTRO:match("Ubuntu") and _platform.DISTRO:match("Ubuntu 20.04") then 
-    _binaryUrl = "https://github.com/Snowgem/Snowgem/releases/download/v3000457-20190909/snowgem-ubuntu18.04-3000457-20190926.zip"
-elseif _platform.DISTRO:match("Ubuntu") and _platform.DISTRO:match("Ubuntu 18.04") then 
-    _binaryUrl = "https://github.com/Snowgem/Snowgem/releases/download/v3000457-20190909/snowgem-ubuntu18.04-3000457-20190926.zip"
-elseif _platform.DISTRO:match("Ubuntu") and _platform.DISTRO:match("Ubuntu 16.04") then 
-    _binaryUrl = "https://github.com/Snowgem/Snowgem/releases/download/v3000457-20190909/snowgem-ubuntu16.04-3000457-20190926.zip"
+    _binaryUrl = "https://github.com/Snowgem/Snowgem/releases/download/v3000458/snowgem-ubuntu-3000458-20200807.zip"
+elseif _platform.DISTRO:match("Ubuntu") then
+    _binaryUrl = "https://github.com/Snowgem/Snowgem/releases/download/v3000458/snowgem-ubuntu-3000458-20200807.zip"
 else 
     log_error("Platform not supported!")
     return
