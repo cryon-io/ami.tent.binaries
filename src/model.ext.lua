@@ -27,5 +27,6 @@ APP.model = eliUtil.merge_tables(
     APP.model,
     {
         DAEMON_URL = _binaryUrl
-    }
+    },
+    true
 )
