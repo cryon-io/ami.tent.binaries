@@ -1,8 +1,4 @@
-if type(APP.model) ~= "table" then
-    APP.model = {}
-end
-
-local _ok, _platformPlugin = safe_load_plugin("platform")
+local _ok, _platformPlugin = am.plugin.get("platform")
 if not _ok then 
     log_error("Cannot determine platform!")
     return
@@ -18,15 +14,9 @@ if _platform.DISTRO:match("Debian") ~= nil then
     _binaryUrl = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-3.1.1.zip"
 elseif _platform.DISTRO:match("Ubuntu") then
     _binaryUrl = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-3.1.1.zip"
-else 
+else
     log_error("Platform not supported!")
     return
 end
 
-APP.model = eliUtil.merge_tables(
-    APP.model,
-    {
-        DAEMON_URL = _binaryUrl
-    },
-    true
-)
+am.app.set_model({ DAEMON_URL = _binaryUrl }, { merge = true, overwrite = true })
