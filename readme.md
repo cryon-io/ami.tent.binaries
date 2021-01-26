@@ -1,3 +1,3 @@
-### xsg.binaries
+### tent.binaries
 
-SnowGem binaries layer for wire nodes
+TENT binaries layer for wire nodes
