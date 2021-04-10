@@ -13,7 +13,7 @@ local _binaryUrl = nil
 
 local _downloadLinks = {
     ["linux-x86_x64 (debian like)"] = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-3.1.1.zip",
-    ["linux-aarch64"] = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-3.1.1.zip",
+    ["linux-aarch64"] = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-aarch64-3.1.1.zip",
 }
 
 if _platform.OS == "unix" then
