@@ -20,7 +20,7 @@ if _platform.OS == "unix" then
     if _platform.DISTRO:match("Debian") or _platform.DISTRO:match("Ubuntu") then
         _binaryUrl = _downloadLinks["linux-x86_x64 (debian like)"]
     end
-    if _platform.PROCESSOR_TYPE:match("aarch64") then
+    if _platform.SYSTEM_TYPE:match("aarch64") then
         _binaryUrl = _downloadLinks["linux-aarch64"]
     end
 end
