@@ -12,15 +12,19 @@ end
 local _binaryUrl = nil
 
 local _downloadLinks = {
-    ["linux-x86_x64 (debian like)"] = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-3.1.1.zip",
-    ["linux-aarch64"] = "https://github.com/TENTOfficial/TENT/releases/download/v3.1.1/snowgem-linux-aarch64-3.1.1.zip",
+    ["linux-x86_x64 (ubuntu)"] = "https://github.com/TENTOfficial/TENT/releases/download/Node/tent-linux.zip",
+    ["linux-x86_x64 (debian)"] = "https://github.com/TENTOfficial/TENT/releases/download/Node/tent-blockbook.zip",
+    ["linux-aarch64"] = "https://github.com/TENTOfficial/TENT/releases/download/Node/tent-linux-aarch64.zip",
 }
 
 if _platform.OS == "unix" then
-    if _platform.DISTRO:match("Debian") or _platform.DISTRO:match("Ubuntu") then
-        _binaryUrl = _downloadLinks["linux-x86_x64 (debian like)"]
+    if _platform.DISTRO:match("[Uu]buntu") then
+        _binaryUrl = _downloadLinks["linux-x86_x64 (ubuntu)"]
     end
-    if _platform.SYSTEM_TYPE:match("aarch64") then
+    if _platform.DISTRO:match("[Dd]ebian") then
+        _binaryUrl = _downloadLinks["linux-x86_x64 (debian)"]
+    end
+    if _platform.SYSTEM_TYPE:match("[Aa]arch64") then
         _binaryUrl = _downloadLinks["linux-aarch64"]
     end
 end
